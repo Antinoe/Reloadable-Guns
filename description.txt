@@ -1,0 +1,93 @@
+An updated version of Ameer Arena's Reloadable Guns mod. This incorporates many bug fixes and improved features, such as Rocket-based weapons requiring a reload, more dynamic Clip Calculation, and a lenient config menu.
+
+If you're unaware of what this does, here is a brief summary:
+
+-All Bullet-based and Rocket-based weapons now have a Clip Size, which is displayed near the top of the screen.
+-Once the counter reaches 0, that weapon cannot be used until it is reloaded.
+-After a Reload, all firearms gain a +300% damage boost for 1 shot. (Configurable)
+-To accomodate for the need to reload, all firearms now deal +15% damage. (Configurable)
+-And no, this is NOT a nerf to guns.
+
+
+-Credits-
+-Ameer Arena: Original author.
+-Antinous: Maintaining the mod after Ameer.
+-Ishigh: Helped me fix a few bugs for v1.2.4.
+-ReloadClipIn: Mike Koenig's Glock 17 9mm Pop Clip In from SoundBible.com.
+-ReloadClipOut: Mike Koenig's Glock 17 9mm Ejecting Magazine from SoundBible.com
+-ReloadCock: From Led's Generic Weapon Pack for ZDoom.
+-Dryfire: Unknown.
+
+
+=Update v0.3=
+-Reloading sound only plays 2-3 times throughout a reload.
+-Improved overall compatibility with Reloading, ranging from UseTime 1 to UseTime 80.
+-Increased Gun base damage from 12% to 25%.
+-Increased Firing Moment damage from 200% to 300%.
+-Corrected English spelling mistake with one of the buffs. It was formerly titled "Fireing Moment". It is now "Firing Moment".
+
+=Update v1.1=
+-A critical bug has been fixed: When launching the mod in Multiplayer, the UI would cause it to disable. Reloadable Guns now works in Multiplayer worlds as intended.
+
+=Update v1.2=
+-Increased max rounds of Tactical Shotgun. It was once 12. It is now 24.
+-Reduced Gun base damage back from 25% to 12%.
+-Added a Dryfire sound.
+-Added the Red Ryder to the list of whitelisted weapons. It has a Clip Capacity of 14 rounds.
+
+=Update v1.2.1=
+-Removed the Musket and Flintlock Pistol from the whitelisted guns.
+-Increased overall Gun Damage from 12% to 15%.
+-Fixed a bug with the Shroomite Magazine: The tooltip claimed that it reduced Reload Speed by 40%, despite it actually being 20%.
+
+=Update v1.2.2=
+-Fixed a bug with the Gun Damage being 25% instead of 15%.
+-The Shroomite Magazine now grants +10% Bullet Damage.
+-Improved the Ammo Calculation. It is much more dynamic and accurate now.
+-Weapons that use Rockets, such as the Rocket Launcher and Grenade Launcher, now count as Reloadable Guns.
+-Set the ammo of both the Flintlock Pistol and Musket to 3.
+-Set the ammo of the Shotgun to 5.
+-Set the ammo of the Tactical Shotgun to 16.
+-Optimized the code a bit.
+
+=Update v1.2.3=
+-The name is now "Reloadable Guns Redux" due to the drastic changes made.
+-Updated the Description.
+-Added a homepage.
+-Increased the MagBuff's bonus from 33% to 35%.
+-Fixed grammar errors in many of the Buffs and Accessories.
+
+=Update v1.2.4=
+-Ported the mod to 1.4.
+-Updated the Description.
+-Changed the default Reload Keybind from "L" to "R".
+-Implemented custom sounds for Dryfire and Reloading.
+-Temporarily removed the UI.
+-Added a few checks for certain functions and fixed a mod compatibility bug with the Starve mod. (Thank you, Ishigh.)
+
+=Update v1.2.5=
+__Gameplay__
+-Added the Drum Magazine, an accessory that doubles Clip Size, but halves Reload speed.
+__Miscellaneous__
+-Fixed some item descriptions.
+-Fixed a bug with the Reload Buff. The Sound Timer now resets each time the buff is applied.
+-Improved the Reload Buff. There are now a few sounds that play with it.
+-Implemented a Config.
+
+=Update v1.2.5.1=
+__Gameplay__
+-The Firing Moment buff now affects Rockets.
+__Config__
+-Rocket-based firearm damage boost is now a separate configuration from normal firearm damage boost.
+
+=Update v1.2.5.2=
+-Rebalanced the Ammo Override's clip sizes for most guns.
+
+=update v1.2.5.3=
+-Updated the mod for the June 2022 update of tModLoader.
+
+=Update v1.2.5.4=
+-Made the Dryfire sound configurable, as it can be irritating if spammed.
+
+=Update v1.2.5.5.=
+-Updated the mod for the July 2022 update of tModLoader.

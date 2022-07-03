@@ -1,0 +1,20 @@
+-BUGS-
+Quick Trashing any selected firearm:
+[23:49:20] [Main Thread/WARN] [tML]: Silently Caught Exception: 
+System.Collections.Generic.KeyNotFoundException: Instance of 'RGGlobalItem' does not exist on the current Item.
+   at Terraria.ModLoader.GlobalType.GetGlobal[TEntity,TGlobal,TResult](Instanced`1[] globals, TResult baseInstance) in tModLoader\Terraria\ModLoader\GlobalType.cs:line 31
+   at Terraria.ModLoader.GlobalType.GetGlobal[TEntity,TGlobal,TResult](Instanced`1[] globals, Boolean exactType) in tModLoader\Terraria\ModLoader\GlobalType.cs:line 35
+   at ReloadableGuns.RGPlayer.ResetEffects() in ReloadableGuns\RGPlayer.cs:line 31
+   at Terraria.ModLoader.PlayerLoader.ResetEffects(Player player) in tModLoader\Terraria\ModLoader\PlayerLoader.cs:line 67
+   at Terraria.Player.ResetEffects() in tModLoader\Terraria\Player.cs:line 13913
+   at Terraria.Player.Update(Int32 i) in tModLoader\Terraria\Player.cs:line 18644
+   at Terraria.Main.DoUpdateInWorld(Stopwatch sw) in tModLoader\Terraria\Main.cs:line 13356
+   at Terraria.Main.DoUpdate(GameTime& gameTime) in tModLoader\Terraria\Main.cs:line 13002
+   at Terraria.Main.Update(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 12557
+   at Microsoft.Xna.Framework.Game.Tick() in D:\a\tModLoader\tModLoader\FNA\src\Game.cs:line 543
+   at Microsoft.Xna.Framework.Game.RunLoop() in D:\a\tModLoader\tModLoader\FNA\src\Game.cs:line 886
+   at Microsoft.Xna.Framework.Game.Run() in D:\a\tModLoader\tModLoader\FNA\src\Game.cs:line 415
+   at Terraria.Program.LaunchGame_(Boolean isServer) in tModLoader\Terraria\Program.cs:line 210
+   at Terraria.Program.LaunchGame(String[] args, Boolean monoArgs) in tModLoader\Terraria\Program.cs:line 176
+   at MonoLaunch.<>c__DisplayClass2_0.<Main>b__0() in tModLoader\Terraria\MonoLaunch.cs:line 60
+   at System.Threading.Thread.StartCallback()

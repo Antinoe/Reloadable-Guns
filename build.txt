@@ -1,0 +1,4 @@
+displayName = Reloadable Guns: Redux
+author = Ameer Arena and Antinous
+version = 1.2.5.5
+homepage = https://github.com/Antinoe/Reloadable-Guns
