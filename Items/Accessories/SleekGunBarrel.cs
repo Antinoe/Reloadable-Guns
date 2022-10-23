@@ -27,8 +27,8 @@ namespace ReloadableGuns.Items.Accessories
         {
             Item Item = player.HeldItem;
             //Item.GetGlobalItem<RGGlobalItem>().AmmoMax2 += 20;
-            player.GetModPlayer<RGPlayer>().ReloadSpeed += 0.06f;
-            player.GetModPlayer<RGPlayer>().AmmoAdd += 0.15f;
+            //player.GetModPlayer<RGPlayer>().ReloadSpeed += 0.06f;
+            //player.GetModPlayer<RGPlayer>().AmmoAdd += 0.15f;
         }
         public override void AddRecipes()
         {

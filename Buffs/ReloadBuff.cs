@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+﻿/*using Microsoft.Xna.Framework;
 using System;
 using System.Linq;
 using Terraria;
@@ -15,11 +15,6 @@ namespace ReloadableGuns.Buffs
 {
     public class ReloadBuff : ModBuff
     {
-		//Sounds
-		public static readonly SoundStyle ReloadClipIn = new SoundStyle("ReloadableGuns/Sounds/ReloadClipIn");
-		public static readonly SoundStyle ReloadClipOut = new SoundStyle("ReloadableGuns/Sounds/ReloadClipOut");
-		public static readonly SoundStyle ReloadCock = new SoundStyle("ReloadableGuns/Sounds/ReloadCock");
-		
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Reloading");
@@ -68,4 +63,4 @@ namespace ReloadableGuns.Buffs
             }
         }
     }
-}
+}*/

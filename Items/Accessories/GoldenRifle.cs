@@ -27,9 +27,9 @@ namespace ReloadableGuns.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             Item Item = player.HeldItem;
-            player.GetModPlayer<RGPlayer>().ReloadSpeed += 0.12f;
-            player.GetModPlayer<RGPlayer>().AmmoAdd += 0.22f;
-            player.GetModPlayer<RGPlayer>().CritBullet = true;
+            //player.GetModPlayer<RGPlayer>().ReloadSpeed += 0.12f;
+            //player.GetModPlayer<RGPlayer>().AmmoAdd += 0.22f;
+            //player.GetModPlayer<RGPlayer>().CritBullet = true;
 			player.GetDamage(DamageClass.Ranged) += 0.1f;
 			player.GetCritChance(DamageClass.Ranged) += 10;
         }

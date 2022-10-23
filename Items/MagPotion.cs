@@ -13,7 +13,7 @@ namespace ReloadableGuns.Items
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Increases Firearm Reload speed by 35%");
+            Tooltip.SetDefault("Increases Firearm Reload speed by 35%\nTHIS ITEM IS CURRENTLY NON-FUNCTIONAL.");
         }
 
         public override void SetDefaults()
@@ -29,7 +29,7 @@ namespace ReloadableGuns.Items
             Item.consumable = true;
             Item.rare = ItemRarityID.Blue;
             Item.value = Item.buyPrice(silver: 2);
-            Item.buffType = ModContent.BuffType<Buffs.MagBuff>(); //Specify an existing buff to be applied when used.
+            //Item.buffType = ModContent.BuffType<Buffs.MagBuff>(); //Specify an existing buff to be applied when used.
             Item.buffTime = 25200; //The amount of time the buff declared in Item.buffType will last in ticks. 5400 / 60 is 90, so this buff will last 90 seconds.
         }
         public override void AddRecipes()

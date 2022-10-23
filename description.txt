@@ -1,8 +1,8 @@
-An updated version of Ameer Arena's Reloadable Guns mod. This incorporates many bug fixes and improved features, such as Rocket-based weapons requiring a reload, more dynamic Clip Calculation, and a lenient config menu.
+An updated version of Ameer Arena's Reloadable Guns mod. This incorporates many bug fixes and improved features, such as Rocket-based weapons requiring a reload, more detailed sound events for reloading and dryfire, and a lenient config menu that allows you to customize which weapons are categorized as which gun type and how many rounds they have.
 
 If you're unaware of what this does, here is a brief summary:
 
--All Bullet-based and Rocket-based weapons now have a Clip Size, which is displayed near the top of the screen.
+-All Bullet-based and Rocket-based weapons now have a Clip Size, which is displayed near the top-right of the screen.
 -Once the counter reaches 0, that weapon cannot be used until it is reloaded.
 -After a Reload, all firearms gain a +300% damage boost for 1 shot. (Configurable)
 -To accomodate for the need to reload, all firearms now deal +15% damage. (Configurable)
@@ -13,10 +13,9 @@ If you're unaware of what this does, here is a brief summary:
 -Ameer Arena: Original author.
 -Antinous: Maintaining the mod after Ameer.
 -Ishigh: Helped me fix a few bugs for v1.2.4.
--ReloadClipIn: Mike Koenig's Glock 17 9mm Pop Clip In from SoundBible.com.
--ReloadClipOut: Mike Koenig's Glock 17 9mm Ejecting Magazine from SoundBible.com
--ReloadCock: From Led's Generic Weapon Pack for ZDoom.
--Dryfire: Unknown.
+-Old ReloadClipIn: Mike Koenig's Glock 17 9mm Pop Clip In from SoundBible.com.
+-Old ReloadClipOut: Mike Koenig's Glock 17 9mm Ejecting Magazine from SoundBible.com
+-Most other gun sounds: Treyarch and ID Software.
 
 
 =Update v0.3=
@@ -91,3 +90,11 @@ __Config__
 
 =Update v1.2.5.5.=
 -Updated the mod for the July 2022 update of tModLoader.
+
+=Update v1.3=
+-Rewrote the mod from the ground up. Lots of changes.
+[=] Firstly, the user can now customize via Lists which guns they want to be categorized as which, and how many rounds they have. This is a massive improvement compared to the last versions, where ammo size was determined dynamically, which wouldn't always fit the gun. Especially modded guns.
+[-] The Reloading and Firing Moment buffs will go unused for now.
+[+] Added a plethora of sound events for the various gun types to reload. So far, this includes: Pistol, Pistol (M1911), Shotgun, Boomstick, Rifle, Sniper, LMG (M60), and Rocket Launcher (RPG).
+[-] All of the other content of this mod, as of now, is non-functional with the new Reloading system. Their usage will regain capability in a newer version.
+[=] The "constant dryfire with automatic weapons" bug has been fixed.

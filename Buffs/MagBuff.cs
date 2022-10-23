@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,4 +22,4 @@ namespace ReloadableGuns.Buffs
             player.GetModPlayer<RGPlayer>().ReloadSpeed += 0.35f;
         }
     }
-}
+}*/

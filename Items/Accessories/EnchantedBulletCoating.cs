@@ -27,7 +27,7 @@ namespace ReloadableGuns.Items.Accessories
         {
             Item Item = player.HeldItem;
             //Item.GetGlobalItem<RGGlobalItem>().AmmoMax2 += 20;
-            player.GetModPlayer<RGPlayer>().CritBullet = true;
+            //player.GetModPlayer<RGPlayer>().CritBullet = true;
         }
         public override void AddRecipes()
         {
