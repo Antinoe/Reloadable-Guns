@@ -80,7 +80,7 @@ namespace ReloadableGuns
 			//Pistol
 			if (ReloadableGunsConfigLists.Instance.gunPistol.Contains(new ItemDefinition(Item.type)))
 			{
-				if (reloadTimer == 89)
+				if (reloadTimer == 74)
 				{
 					if (Item.GetGlobalItem<ReloadableGunsGlobalItem>().AmmoAmount == Item.GetGlobalItem<ReloadableGunsGlobalItem>().AmmoAmountMax)
 					{
@@ -298,7 +298,7 @@ namespace ReloadableGuns
 					reloadTimer = 60;
 					if (ReloadableGunsConfigLists.Instance.gunPistol.Contains(new ItemDefinition(Item.type)))
 					{
-						reloadTimer = 90;
+						reloadTimer = 75;
 					}
 					if (ReloadableGunsConfigLists.Instance.gunPistolM1911.Contains(new ItemDefinition(Item.type)))
 					{
