@@ -27,7 +27,7 @@ namespace ReloadableGuns.Projectiles
 		public override void AI()
         {
 			Player target = Main.player[Projectile.owner];
-			target.GetModPlayer<ReloadableGunsPlayer>().screenShakeTimerWeak = 5;
+			target.GetModPlayer<ReloadableGunsPlayer>().screenShakeTimerWeak = 1;
 		}
 	}
 }
