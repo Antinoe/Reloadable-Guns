@@ -48,13 +48,21 @@ namespace ReloadableGuns
 		[DefaultValue(true)]
 		public bool enableFiringMoment {get; set;}
 		
-		[Label("[i:EmptyBullet] Firing Moment Damage")]
+		[Label("[i:EmptyBullet][i:TitanGlove] Firing Moment Damage")]
 		[Tooltip("Damage percentage increase for the Firing Moment ability.\n[Default: 3]")]
 		[Slider]
 		[DefaultValue(3f)]
 		[Range(0f, 5f)]
 		[Increment(.50f)]
 		public float firingMomentDamage {get; set;}
+		
+		[Label("[i:EmptyBullet][i:Stopwatch] Firing Moment Time")]
+		[Tooltip("How long the Firing Moment ability lasts.\n[Default: 30]")]
+		[Slider]
+		[DefaultValue(300)]
+		[Range(30, 600)]
+		[Increment(30)]
+		public int firingMomentTime {get; set;}
 		
 	}
 

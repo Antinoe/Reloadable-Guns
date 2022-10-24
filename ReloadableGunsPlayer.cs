@@ -79,7 +79,7 @@ namespace ReloadableGuns
 				reloading = false;
 				if (ReloadableGunsConfig.Instance.enableFiringMoment)
 				{
-					Player.AddBuff(ModContent.BuffType<FiringMoment>(), 600);
+					Player.AddBuff(ModContent.BuffType<FiringMoment>(), ReloadableGunsConfig.Instance.firingMomentTime);
 				}
 			}
 			//Pistol

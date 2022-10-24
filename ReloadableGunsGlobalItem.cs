@@ -20,6 +20,7 @@ using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Graphics;
 using Terraria.ModLoader.Config;
 using ReloadableGuns.Projectiles;
+using ReloadableGuns.Buffs;
 
 namespace ReloadableGuns
 {
@@ -210,6 +211,11 @@ namespace ReloadableGuns
 				//Ammo
 				else
 				{
+					AmmoAmount--;
+					if (Player.HasBuff(ModContent.BuffType<FiringMoment>()))
+					{
+						Player.ClearBuff(ModContent.BuffType<FiringMoment>());
+					}
 					if (ReloadableGunsConfigClient.Instance.enableScreenshake)
 					{
 						if (ReloadableGunsConfigLists.Instance.gunPistol.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunPistolM1911.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunRevolver.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunSMG.Contains(new ItemDefinition(Item.type)))
@@ -225,7 +231,6 @@ namespace ReloadableGuns
 							Projectile.NewProjectile(Projectile.GetSource_None(), Player.Center, Vector2.Zero, ModContent.ProjectileType<ScreenshakeProjectileStrong>(), 0, 0, Player.whoAmI);
 						}
 					}
-					AmmoAmount--;
 					return true;
 				}
 			}
