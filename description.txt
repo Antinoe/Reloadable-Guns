@@ -103,3 +103,8 @@ __Config__
 [+] Re-implemented the Firing Moment ability.
 [=] Adjusted the Screenshake to last 1 tick instead of 5.
 [=] Adjusted the Config a bit.
+
+=Update v1.3.2=
+[=] Fixed the bug where Firing Moment doesn't clear after shooting.
+[=] Added an option to change how long the Firing Moment buff lasts.
+[=] Made some adjustments to the Screenshake effects.

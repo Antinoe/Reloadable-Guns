@@ -1,5 +1,5 @@
 author = Ameer Arena & Antinous
-version = 1.3.1
+version = 1.3.2
 displayName = Reloadable Guns
 homepage = https://github.com/Antinoe/Reloadable-Guns
 hideCode = false
