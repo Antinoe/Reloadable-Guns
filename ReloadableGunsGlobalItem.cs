@@ -23,27 +23,27 @@ using ReloadableGuns.Projectiles;
 
 namespace ReloadableGuns
 {
-    public class ReloadableGunsGlobalItem : GlobalItem
-    {
-        public int AmmoAmount;
-        public int AmmoAmountMax;
-        public override bool InstancePerEntity => true;
+	public class ReloadableGunsGlobalItem : GlobalItem
+	{
+		public int AmmoAmount;
+		public int AmmoAmountMax;
+		public override bool InstancePerEntity => true;
 
-        public override GlobalItem Clone(Item Item, Item ItemClone)
-        {
-            ReloadableGunsGlobalItem myClone = (ReloadableGunsGlobalItem)base.Clone(Item, ItemClone);
-            myClone.AmmoAmount = AmmoAmount;
-            myClone.AmmoAmountMax = AmmoAmountMax;
-            return myClone;
-        }
+		public override GlobalItem Clone(Item Item, Item ItemClone)
+		{
+			ReloadableGunsGlobalItem myClone = (ReloadableGunsGlobalItem)base.Clone(Item, ItemClone);
+			myClone.AmmoAmount = AmmoAmount;
+			myClone.AmmoAmountMax = AmmoAmountMax;
+			return myClone;
+		}
 		public override void SetDefaults(Item Item)
-        {
+		{
 			if (Item.useAmmo == AmmoID.Bullet)
-            {
+			{
 				Item.damage += (int)(Item.damage * ReloadableGunsConfig.Instance.gunDamage);
 			}
 			if (Item.useAmmo == AmmoID.Rocket)
-            {
+			{
 				Item.damage += (int)(Item.damage * ReloadableGunsConfig.Instance.rocketDamage);
 			}
 			if (Item.useAmmo == AmmoID.Bullet || Item.useAmmo == AmmoID.Rocket)
@@ -177,12 +177,13 @@ namespace ReloadableGuns
 				}
 			}
 		}
-        public override bool CanUseItem(Item Item, Player Player)
-        {
-            var rgp = Player.GetModPlayer<ReloadableGunsPlayer>();
+		public override bool CanUseItem(Item Item, Player Player)
+		{
+			var rgp = Player.GetModPlayer<ReloadableGunsPlayer>();
 			if (Item.useAmmo == AmmoID.Bullet || Item.useAmmo == AmmoID.Rocket)
-            {
-				if (AmmoAmount <= 0) //If Ammo Number is 0, then play a Dryfire sound.
+			{
+				//No Ammo
+				if (AmmoAmount <= 0)
 				{
 					if (rgp.DryFireTimer <= 0)
 					{
@@ -206,8 +207,9 @@ namespace ReloadableGuns
 					}
 					return false;
 				}
-                else
-                {
+				//Ammo
+				else
+				{
 					if (ReloadableGunsConfigClient.Instance.enableScreenshake)
 					{
 						if (ReloadableGunsConfigLists.Instance.gunPistol.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunPistolM1911.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunRevolver.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunSMG.Contains(new ItemDefinition(Item.type)))
@@ -223,11 +225,11 @@ namespace ReloadableGuns
 							Projectile.NewProjectile(Projectile.GetSource_None(), Player.Center, Vector2.Zero, ModContent.ProjectileType<ScreenshakeProjectileStrong>(), 0, 0, Player.whoAmI);
 						}
 					}
-                    AmmoAmount--;
-                    return true;
-                }
-            }
+					AmmoAmount--;
+					return true;
+				}
+			}
 			return base.CanUseItem(Item, Player);
-        }
-    }
+		}
+	}
 }

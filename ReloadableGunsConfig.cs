@@ -5,11 +5,11 @@ using Terraria.ModLoader.Config;
 
 namespace ReloadableGuns
 {
-    [Label("Client Config")]
-    public class ReloadableGunsConfigClient : ModConfig
-    {
-        public override ConfigScope Mode => ConfigScope.ClientSide;
-        public static ReloadableGunsConfigClient Instance;
+	[Label("Client Config")]
+	public class ReloadableGunsConfigClient : ModConfig
+	{
+		public override ConfigScope Mode => ConfigScope.ClientSide;
+		public static ReloadableGunsConfigClient Instance;
 		
 	[Header("General")]
 		
@@ -19,37 +19,50 @@ namespace ReloadableGuns
 		public bool enableScreenshake {get; set;}
 	}
 
-    [Label("Server Config")]
-    public class ReloadableGunsConfig : ModConfig
-    {
-        public override ConfigScope Mode => ConfigScope.ServerSide;
-        public static ReloadableGunsConfig Instance;
+	[Label("Server Config")]
+	public class ReloadableGunsConfig : ModConfig
+	{
+		public override ConfigScope Mode => ConfigScope.ServerSide;
+		public static ReloadableGunsConfig Instance;
 		
 	[Header("General")]
 		
-        [Label("[i:MusketBall] Gun Damage")]
-        [Tooltip("Damage percentage increase for Guns.\n[Default: 0.15]")]
-        [Slider]
-        [DefaultValue(0.15f)]
-        [Range(0f, 1f)]
-        [Increment(.05f)]
-        public float gunDamage {get; set;}
+		[Label("[i:MusketBall] Gun Damage")]
+		[Tooltip("Damage percentage increase for Guns.\n[Default: 0.15]")]
+		[Slider]
+		[DefaultValue(0.15f)]
+		[Range(0f, 5f)]
+		[Increment(.05f)]
+		public float gunDamage {get; set;}
 		
-        [Label("[i:RocketI] Rocket Damage")]
-        [Tooltip("Damage percentage increase for Rockets.\n[Default: 0.50]")]
-        [Slider]
-        [DefaultValue(0.50f)]
-        [Range(0f, 1f)]
-        [Increment(.05f)]
-        public float rocketDamage {get; set;}
+		[Label("[i:RocketI] Rocket Damage")]
+		[Tooltip("Damage percentage increase for Rockets.\n[Default: 0.50]")]
+		[Slider]
+		[DefaultValue(0.50f)]
+		[Range(0f, 5f)]
+		[Increment(.05f)]
+		public float rocketDamage {get; set;}
 		
-    }
+		[Label("[i:EmptyBullet] Firing Moment")]
+		[Tooltip("If false, the Firing Moment ability will not be granted upon Reloading.\n[Default: On]")]
+		[DefaultValue(true)]
+		public bool enableFiringMoment {get; set;}
+		
+		[Label("[i:EmptyBullet] Firing Moment Damage")]
+		[Tooltip("Damage percentage increase for the Firing Moment ability.\n[Default: 3]")]
+		[Slider]
+		[DefaultValue(3f)]
+		[Range(0f, 5f)]
+		[Increment(.50f)]
+		public float firingMomentDamage {get; set;}
+		
+	}
 
 	[Label("Lists")]
 	public class ReloadableGunsConfigLists : ModConfig
 	{
-        public override ConfigScope Mode => ConfigScope.ServerSide;
-        public static ReloadableGunsConfigLists Instance;
+		public override ConfigScope Mode => ConfigScope.ServerSide;
+		public static ReloadableGunsConfigLists Instance;
 		
 	[Header("Gun Lists")]
 		

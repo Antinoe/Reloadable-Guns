@@ -17,24 +17,25 @@ using Terraria.GameContent;
 using ReLogic.Utilities;
 using Terraria.GameInput; //This allows the ``ProcessTriggers`` Method to work.
 using Terraria.ModLoader.Config;
+using ReloadableGuns.Buffs;
 
 namespace ReloadableGuns
 {
-    public class ReloadableGunsPlayer : ModPlayer
-    {
+	public class ReloadableGunsPlayer : ModPlayer
+	{
 		public bool reloading = false;
 		public int reloadTimer = 0;
-        public int DryFireTimer;
-        public int screenShakeTimerVeryWeak;
-        public int screenShakeTimerWeak;
-        public int screenShakeTimerModerate;
-        public int screenShakeTimerStrong;
+		public int DryFireTimer;
+		public int screenShakeTimerVeryWeak;
+		public int screenShakeTimerWeak;
+		public int screenShakeTimerModerate;
+		public int screenShakeTimerStrong;
 
-        public override void ResetEffects()
-        {
+		public override void ResetEffects()
+		{
 			//reloading = false;
 			//reloadTimer = 0;
-        }
+		}
 
 		public override void PostUpdateMiscEffects()
 		{
@@ -76,6 +77,10 @@ namespace ReloadableGuns
 			{
 				Item.GetGlobalItem<ReloadableGunsGlobalItem>().AmmoAmount = Item.GetGlobalItem<ReloadableGunsGlobalItem>().AmmoAmountMax;
 				reloading = false;
+				if (ReloadableGunsConfig.Instance.enableFiringMoment)
+				{
+					Player.AddBuff(ModContent.BuffType<FiringMoment>(), 600);
+				}
 			}
 			//Pistol
 			if (ReloadableGunsConfigLists.Instance.gunPistol.Contains(new ItemDefinition(Item.type)))
@@ -262,29 +267,29 @@ namespace ReloadableGuns
 			}
 		}
 
-        public override void ModifyScreenPosition() //Screenshake
-        {
-            if (screenShakeTimerVeryWeak > 0)
-            {
+		public override void ModifyScreenPosition() //Screenshake
+		{
+			if (screenShakeTimerVeryWeak > 0)
+			{
 				Main.screenPosition.X += (float)Math.Round(Main.rand.Next((int)(0f - 1), (int)1) * 1.10f);
 				Main.screenPosition.Y += (float)Math.Round(Main.rand.Next((int)(0f - 1), (int)1) * 1.10f);
-            }
-            if (screenShakeTimerWeak > 0)
-            {
+			}
+			if (screenShakeTimerWeak > 0)
+			{
 				Main.screenPosition.X += (float)Math.Round(Main.rand.Next((int)(0f - 1), (int)1) * 1.50f);
 				Main.screenPosition.Y += (float)Math.Round(Main.rand.Next((int)(0f - 1), (int)1) * 1.50f);
-            }
-            if (screenShakeTimerModerate > 0)
-            {
+			}
+			if (screenShakeTimerModerate > 0)
+			{
 				Main.screenPosition.X += (float)Math.Round(Main.rand.Next((int)(0f - 1), (int)1) * 2.00f);
 				Main.screenPosition.Y += (float)Math.Round(Main.rand.Next((int)(0f - 1), (int)1) * 2.00f);
-            }
-            if (screenShakeTimerStrong > 0)
-            {
+			}
+			if (screenShakeTimerStrong > 0)
+			{
 				Main.screenPosition.X += (float)Math.Round(Main.rand.Next((int)(0f - 1), (int)1) * 4.00f);
 				Main.screenPosition.Y += (float)Math.Round(Main.rand.Next((int)(0f - 1), (int)1) * 4.00f);
-            }
-        }
+			}
+		}
 
 		public override void ProcessTriggers(TriggersSet triggersSet)
 		{
@@ -334,5 +339,5 @@ namespace ReloadableGuns
 				Player.bodyFrame.Y = Player.bodyFrame.Height * 10;
 			}
 		}
-    }
+	}
 }

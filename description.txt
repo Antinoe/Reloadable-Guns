@@ -98,3 +98,8 @@ __Config__
 [+] Added a plethora of sound events for the various gun types to reload. So far, this includes: Pistol, Pistol (M1911), Shotgun, Boomstick, Rifle, Sniper, LMG (M60), and Rocket Launcher (RPG).
 [-] All of the other content of this mod, as of now, is non-functional with the new Reloading system. Their usage will regain capability in a newer version.
 [=] The "constant dryfire with automatic weapons" bug has been fixed.
+
+=Update v1.3.1=
+[+] Re-implemented the Firing Moment ability.
+[=] Adjusted the Screenshake to last 1 tick instead of 5.
+[=] Adjusted the Config a bit.
