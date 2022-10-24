@@ -222,7 +222,11 @@ namespace ReloadableGuns
 						{
 							Projectile.NewProjectile(Projectile.GetSource_None(), Player.Center, Vector2.Zero, ModContent.ProjectileType<ScreenshakeProjectileVeryWeak>(), 0, 0, Player.whoAmI);
 						}
-						if (ReloadableGunsConfigLists.Instance.gunShotgun.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunBoomstick.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunMusket.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunLeverActionRifle.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunRifle.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunLMG.Contains(new ItemDefinition(Item.type)))
+						if (ReloadableGunsConfigLists.Instance.gunLeverActionRifle.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunRifle.Contains(new ItemDefinition(Item.type)))
+						{
+							Projectile.NewProjectile(Projectile.GetSource_None(), Player.Center, Vector2.Zero, ModContent.ProjectileType<ScreenshakeProjectileWeak>(), 0, 0, Player.whoAmI);
+						}
+						if (ReloadableGunsConfigLists.Instance.gunShotgun.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunBoomstick.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunMusket.Contains(new ItemDefinition(Item.type)) || ReloadableGunsConfigLists.Instance.gunLMG.Contains(new ItemDefinition(Item.type)))
 						{
 							Projectile.NewProjectile(Projectile.GetSource_None(), Player.Center, Vector2.Zero, ModContent.ProjectileType<ScreenshakeProjectileModerate>(), 0, 0, Player.whoAmI);
 						}
