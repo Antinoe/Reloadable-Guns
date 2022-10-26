@@ -1,4 +1,4 @@
-An updated version of Ameer Arena's Reloadable Guns mod. This incorporates many bug fixes and improved features, such as Rocket-based weapons requiring a reload, more detailed sound events for reloading and dryfire, and a lenient config menu that allows you to customize which weapons are categorized as which gun type and how many rounds they have.
+An updated version of Ameer Arena's Reloadable Guns mod. This incorporates many bug fixes and improved features, such as Rocket-based weapons requiring a reload, more detailed sound events for reloading and dryfire, and a lenient config menu that allows you to customize which weapons are categorized as which gun type.
 
 If you're unaware of what this does, here is a brief summary:
 
@@ -108,3 +108,6 @@ __Config__
 [=] Fixed the bug where Firing Moment doesn't clear after shooting.
 [=] Added an option to change how long the Firing Moment buff lasts.
 [=] Made some adjustments to the Screenshake effects.
+
+=Update v1.3.2.1=
+[-] Since I can't find the time to work on that awful game-breaking bug with Ammo Amount Configuration, I've reverted the former Dynamic Ammo Calculation. I don't know when I'll be able to fix this, but at least the mod will be in a playable state for now.

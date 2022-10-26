@@ -159,7 +159,7 @@ namespace ReloadableGuns
 				new ItemDefinition(ItemID.ElectrosphereLauncher)
 			};
 		
-		[Label("[i:AlphabetStatue1] Ammo 1")]
+		/*[Label("[i:AlphabetStatue1] Ammo 1")]
 		public List<ItemDefinition> ammo1 = new List<ItemDefinition>
 			{
 				new ItemDefinition(ItemID.FlintlockPistol),
@@ -294,7 +294,7 @@ namespace ReloadableGuns
 			{
 				new ItemDefinition(ItemID.Gatligator),
 				new ItemDefinition(ItemID.ChainGun)
-			};
+			};*/
 		
 	}
 }

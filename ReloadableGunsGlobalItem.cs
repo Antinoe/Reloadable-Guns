@@ -51,7 +51,58 @@ namespace ReloadableGuns
 			{
 				AmmoAmount = 10;
 				AmmoAmountMax = 10;
-				if (ReloadableGunsConfigLists.Instance.ammo1.Contains(new ItemDefinition(Item.type)))
+				//useTime Chart.
+				//1-8=insanely fast
+				//9-20=very fast
+				//21-25=fast
+				//26-30=average
+				//31-35=slow
+				//36-45=very slow
+				//46-55=extremely slow
+				//56-100=snail
+				
+				if(Item.useTime <= 8) //Guns with insanely fast useTime.
+				{
+					AmmoAmount = (int)(Item.useTime * 20);
+					AmmoAmountMax = (int)(Item.useTime * 20);
+				}
+				else if(Item.useTime <= 20) //Guns with very fast useTime.
+				{
+					AmmoAmount = (int)(Item.useTime * 1.15);
+					AmmoAmountMax = (int)(Item.useTime * 1.15);
+				}
+				else if(Item.useTime <= 25) //Guns with fast useTime.
+				{
+					AmmoAmount = (int)(Item.useTime / 3);
+					AmmoAmountMax = (int)(Item.useTime / 3);
+				}
+				else if(Item.useTime <= 30) //Guns with average useTime.
+				{
+					AmmoAmount = (int)(Item.useTime / 4);
+					AmmoAmountMax = (int)(Item.useTime / 4);
+				}
+				else if(Item.useTime <= 35) //Guns with slow useTime.
+				{
+					AmmoAmount = (int)(Item.useTime / 5);
+					AmmoAmountMax = (int)(Item.useTime / 5);
+				}
+				else if(Item.useTime <= 45) //Guns with very slow useTime.
+				{
+					AmmoAmount = (int)(Item.useTime / 10);
+					AmmoAmountMax = (int)(Item.useTime / 10);
+				}
+				else if(Item.useTime <= 55) //Guns with extremely slow useTime.
+				{
+					AmmoAmount = (int)(Item.useTime / 10);
+					AmmoAmountMax = (int)(Item.useTime / 10);
+				}
+				else if(Item.useTime <= 100) //Guns with snail useTime.
+				{
+					AmmoAmount = (int)(Item.useTime / 30);
+					AmmoAmountMax = (int)(Item.useTime / 30);
+				}
+				
+				/*if (ReloadableGunsConfigLists.Instance.ammo1.Contains(new ItemDefinition(Item.type)))
 				{
 					AmmoAmount = 1;
 					AmmoAmountMax = 1;
@@ -175,7 +226,7 @@ namespace ReloadableGuns
 				{
 					AmmoAmount = 100;
 					AmmoAmountMax = 100;
-				}
+				}*/
 			}
 		}
 		public override bool CanUseItem(Item Item, Player Player)
